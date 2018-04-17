@@ -1,0 +1,8 @@
+Endless runner
+
+character at left edge of screen
+stage always moves right ot left
+obstacles appear from right
+character jumps over them or ducks or whatever
+character always runs
+character is actor, subclass and override draw to do sprite
