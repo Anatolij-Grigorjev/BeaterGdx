@@ -7,9 +7,14 @@ import com.tiem625.beatergdx.Textures
 
 class PlayerActor: Actor() {
 
-    val sprite = Sprite(Textures.badLogic)
+    val sprite = Sprite(Textures.badLogic).apply {
+        this@PlayerActor.width = this.width
+        this@PlayerActor.height = this.height
+    }
 
     override fun draw(batch: Batch?, parentAlpha: Float) {
+
+        batch?.draw(sprite, x, y, originX, originY, width, height, scaleX, scaleY, rotation)
         super.draw(batch, parentAlpha)
     }
 
