@@ -7,6 +7,7 @@ import com.badlogic.gdx.scenes.scene2d.InputListener
 import com.badlogic.gdx.scenes.scene2d.Stage
 import com.badlogic.gdx.utils.viewport.ScreenViewport
 import com.tiem625.beatergdx.actors.PlayerActor
+import com.tiem625.beatergdx.actors.ScrollingBGActor
 import com.tiem625.beatergdx.log
 
 class RunStage : Stage(ScreenViewport().apply {
@@ -38,8 +39,16 @@ class RunStage : Stage(ScreenViewport().apply {
     val playerActor: PlayerActor = PlayerActor().apply {
         this@RunStage.addActor(this)
     }
+    val bgActor: ScrollingBGActor = ScrollingBGActor().apply {
+        this@RunStage.addActor(this)
+    }
 
     override fun act(delta: Float) {
         super.act(delta)
+    }
+
+    override fun draw() {
+        actors.sort({ o1, o2 -> o1.zIndex.compareTo(o2.zIndex) })
+        super.draw()
     }
 }

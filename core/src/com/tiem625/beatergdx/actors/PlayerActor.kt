@@ -7,6 +7,11 @@ import com.tiem625.beatergdx.Textures
 
 class PlayerActor : Actor() {
 
+    init {
+
+        zIndex = 10
+    }
+
     val sprite = Sprite(Textures.badLogic).apply {
         this@PlayerActor.width = this.width
         this@PlayerActor.height = this.height
