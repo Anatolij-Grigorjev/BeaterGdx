@@ -36,10 +36,10 @@ class RunStage : Stage(ScreenViewport().apply {
         })
     }
 
-    val playerActor: PlayerActor = PlayerActor().apply {
+    val bgActor: ScrollingBGActor = ScrollingBGActor().apply {
         this@RunStage.addActor(this)
     }
-    val bgActor: ScrollingBGActor = ScrollingBGActor().apply {
+    val playerActor: PlayerActor = PlayerActor().apply {
         this@RunStage.addActor(this)
     }
 
@@ -48,7 +48,6 @@ class RunStage : Stage(ScreenViewport().apply {
     }
 
     override fun draw() {
-        actors.sort({ o1, o2 -> o1.zIndex.compareTo(o2.zIndex) })
         super.draw()
     }
 }
