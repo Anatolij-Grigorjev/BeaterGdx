@@ -12,7 +12,7 @@ class PlayerActor : Actor() {
         zIndex = 10
     }
 
-    val sprite = Sprite(Textures.badLogic).apply {
+    val sprite = Sprite(Textures.davis_0).apply {
         this@PlayerActor.width = this.width
         this@PlayerActor.height = this.height
 
