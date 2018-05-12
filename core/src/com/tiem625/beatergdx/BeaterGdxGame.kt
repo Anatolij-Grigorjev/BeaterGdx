@@ -3,6 +3,7 @@ package com.tiem625.beatergdx
 import com.badlogic.gdx.Game
 import com.badlogic.gdx.Gdx
 import com.badlogic.gdx.scenes.scene2d.Stage
+import com.tiem625.beatergdx.resources.Textures
 import com.tiem625.beatergdx.stages.RunStage
 
 class BeaterGdxGame : Game() {

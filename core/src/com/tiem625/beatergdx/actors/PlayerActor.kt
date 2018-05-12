@@ -3,7 +3,7 @@ package com.tiem625.beatergdx.actors
 import com.badlogic.gdx.graphics.g2d.Batch
 import com.badlogic.gdx.graphics.g2d.Sprite
 import com.badlogic.gdx.scenes.scene2d.Actor
-import com.tiem625.beatergdx.Textures
+import com.tiem625.beatergdx.resources.Textures
 
 class PlayerActor : Actor() {
 

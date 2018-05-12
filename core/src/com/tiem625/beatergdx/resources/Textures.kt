@@ -1,8 +1,8 @@
-package com.tiem625.beatergdx
+package com.tiem625.beatergdx.resources
 
 import com.badlogic.gdx.graphics.Texture
 
-object Textures {
+object Textures: ResourceHolder {
 
     lateinit var badLogic: Texture
     lateinit var cats: Texture
@@ -11,12 +11,7 @@ object Textures {
     fun load() {
 
         badLogic = Texture("badlogic.jpg")
-        davis_0 = Texture("davis.bmp")
+        davis_0 = Texture("davis_0.bmp")
         cats = Texture("cats.jpg")
-    }
-
-    fun dispose() {
-
-        badLogic.dispose()
     }
 }
